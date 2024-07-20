@@ -23,7 +23,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: checkout
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
         with:
           submodules: 'recursive'
 
@@ -33,7 +33,7 @@ jobs:
         with:
           api-key: ${{ secrets.IONOS_API_KEY }}
           service-host: api-us.ionos.space
-          project-id: d71329a0-ec73-4998-860f-2bf5c8e35dfa
+          project-id: febb6fe3-34b7-4a05-a1c4-31ef482b4e22
           branch-id: ${{ inputs.branch-id }}
           version: ${{ github.sha }}
           folder: ${{ env.DEPLOYMENT_FOLDER }}
